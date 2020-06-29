@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "0fc3c48f-6c74-4e44-92e2-068db3834342",
+		"name": "poc-cliente-spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Clientes: Recuperar Um",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"tipoReceita\":\"tipoReceita\",\n\t\t\"dataReceita\": \"dataReceita\",\n\t\t\"uf\": \"uf\",\n\t\t\"nomeMedicamento\":\"nomeMedicamento\",\n\t\t\"descricaoReceita\": \"descricaoReceita\",\n\t\t\"nomeResponsavelUm\": \"nomeResponsavelUm\",\n\t\t\"cpfResponsavelUm\" : \"cpfResponsavelUm\",\n\t\t\"nomeResponsavelDois\" : \"nomeResponsavelDois\",\n\t\t\"cpfResponsavelDois\" : \"cpfResponsavelDois\",\n\t\t\"nomeResponsavelTres\" : \"nomeResponsavelTres\",\n\t\t\"cpfResponsavelTres\" : \"cpfResponsavelTres\",\n\t\t\"nomeResponsavelQuatro\" : \"nomeResponsavelQuatro\",\n\t\t\"cpfResponsavelQuatro\" : \"cpfResponsavelQuatro\",\n\t\t\"medico\": {\"id\":2},\n        \"pacientes\": {\n        \t\"id\":8,\n        \t\"credenciaisPaciente\" :{\n        \t\"cpfPaciente\": \"467.955.398-73\"\n        \t}\n        }\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes/5",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"tipoReceita\":\"tipoReceita\",\n\t\t\"dataReceita\": \"dataReceita\",\n\t\t\"uf\": \"uf\",\n\t\t\"nomeMedicamento\":\"nomeMedicamento\",\n\t\t\"descricaoReceita\": \"descricaoReceita\",\n\t\t\"nomeResponsavelUm\": \"nomeResponsavelUm\",\n\t\t\"cpfResponsavelUm\" : \"cpfResponsavelUm\",\n\t\t\"nomeResponsavelDois\" : \"nomeResponsavelDois\",\n\t\t\"cpfResponsavelDois\" : \"cpfResponsavelDois\",\n\t\t\"nomeResponsavelTres\" : \"nomeResponsavelTres\",\n\t\t\"cpfResponsavelTres\" : \"cpfResponsavelTres\",\n\t\t\"nomeResponsavelQuatro\" : \"nomeResponsavelQuatro\",\n\t\t\"cpfResponsavelQuatro\" : \"cpfResponsavelQuatro\",\n\t\t\"medico\": {\"id\":2},\n        \"pacientes\": {\n        \t\"id\":8,\n        \t\"credenciaisPaciente\" :{\n        \t\"cpfPaciente\": \"467.955.398-73\"\n        \t}\n        }\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: p/ CPF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"tipoReceita\":\"tipoReceita\",\n\t\t\"dataReceita\": \"dataReceita\",\n\t\t\"uf\": \"uf\",\n\t\t\"nomeMedicamento\":\"nomeMedicamento\",\n\t\t\"descricaoReceita\": \"descricaoReceita\",\n\t\t\"nomeResponsavelUm\": \"nomeResponsavelUm\",\n\t\t\"cpfResponsavelUm\" : \"cpfResponsavelUm\",\n\t\t\"nomeResponsavelDois\" : \"nomeResponsavelDois\",\n\t\t\"cpfResponsavelDois\" : \"cpfResponsavelDois\",\n\t\t\"nomeResponsavelTres\" : \"nomeResponsavelTres\",\n\t\t\"cpfResponsavelTres\" : \"cpfResponsavelTres\",\n\t\t\"nomeResponsavelQuatro\" : \"nomeResponsavelQuatro\",\n\t\t\"cpfResponsavelQuatro\" : \"cpfResponsavelQuatro\",\n\t\t\"medico\": {\"id\":2},\n        \"pacientes\": {\n        \t\"id\":8,\n        \t\"credenciaisPaciente\" :{\n        \t\"cpfPaciente\": \"467.955.398-73\"\n        \t}\n        }\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes?cpf=11122233312",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "cpf",
+									"value": "11122233312"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: p/ Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes?nome=Zé Ruela",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Zé Ruela"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: Todos (paginação específica)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"tipoReceita\":\"tipoReceita\",\n\t\t\"dataReceita\": \"dataReceita\",\n\t\t\"uf\": \"uf\",\n\t\t\"nomeMedicamento\":\"nomeMedicamento\",\n\t\t\"descricaoReceita\": \"descricaoReceita\",\n\t\t\"nomeResponsavelUm\": \"nomeResponsavelUm\",\n\t\t\"cpfResponsavelUm\" : \"cpfResponsavelUm\",\n\t\t\"nomeResponsavelDois\" : \"nomeResponsavelDois\",\n\t\t\"cpfResponsavelDois\" : \"cpfResponsavelDois\",\n\t\t\"nomeResponsavelTres\" : \"nomeResponsavelTres\",\n\t\t\"cpfResponsavelTres\" : \"cpfResponsavelTres\",\n\t\t\"nomeResponsavelQuatro\" : \"nomeResponsavelQuatro\",\n\t\t\"cpfResponsavelQuatro\" : \"cpfResponsavelQuatro\",\n\t\t\"medico\": {\"id\":2},\n        \"pacientes\": {\n        \t\"id\":8,\n        \t\"credenciaisPaciente\" :{\n        \t\"cpfPaciente\": \"467.955.398-73\"\n        \t}\n        }\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes?size=2&page=1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: Novo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Novato Silva\",\n    \"cpf\": \"64938880008\",\n    \"dataNascimento\": \"2001-01-01\"\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes"
+							]
+						},
+						"description": "CPF aleatório válido gerado no site https://www.4devs.com.br/"
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: Atualização geral de cliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Pessoa Alterada Totalmente Silva\",\n    \"cpf\": \"23527420053\",\n    \"dataNascimento\": \"2001-01-01\"\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes/4",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: Atualização parcial de cliente",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Pessoa Alterada Parcialmente Souza\"\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes/4/",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes: Excluir Um",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"tipoReceita\":\"tipoReceita\",\n\t\t\"dataReceita\": \"dataReceita\",\n\t\t\"uf\": \"uf\",\n\t\t\"nomeMedicamento\":\"nomeMedicamento\",\n\t\t\"descricaoReceita\": \"descricaoReceita\",\n\t\t\"nomeResponsavelUm\": \"nomeResponsavelUm\",\n\t\t\"cpfResponsavelUm\" : \"cpfResponsavelUm\",\n\t\t\"nomeResponsavelDois\" : \"nomeResponsavelDois\",\n\t\t\"cpfResponsavelDois\" : \"cpfResponsavelDois\",\n\t\t\"nomeResponsavelTres\" : \"nomeResponsavelTres\",\n\t\t\"cpfResponsavelTres\" : \"cpfResponsavelTres\",\n\t\t\"nomeResponsavelQuatro\" : \"nomeResponsavelQuatro\",\n\t\t\"cpfResponsavelQuatro\" : \"cpfResponsavelQuatro\",\n\t\t\"medico\": {\"id\":2},\n        \"pacientes\": {\n        \t\"id\":8,\n        \t\"credenciaisPaciente\" :{\n        \t\"cpfPaciente\": \"467.955.398-73\"\n        \t}\n        }\n}"
+						},
+						"url": {
+							"raw": "{{url_base}}/clientes/1",
+							"host": [
+								"{{url_base}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7bb31e7d-1083-4215-8c11-2690339dbc83",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f46d0447-deb4-4cfa-abd0-a78416abaa18",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "a174b5be-67a3-4d5d-8f25-2a99d0132a3d",
+			"key": "url_base",
+			"value": "http://localhost:8321",
+			"type": "string"
+		}
+	]
+}
