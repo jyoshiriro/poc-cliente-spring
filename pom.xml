@@ -13,13 +13,19 @@
     <version>0.0.1</version>
     <name>POC Cliente Spring Boot</name>
     <description>POC de CRUD de Cliente com Spring Boot</description>
+    <packaging>war</packaging>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <kotlin.version>1.3.72</kotlin.version>
         <start-class>br.com.kenoby.poccliente.PocClienteSpringApplication</start-class>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -104,7 +110,8 @@
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>8.3.1.jre11-preview</version>
+            <version>8.3.1.jre8-preview</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
