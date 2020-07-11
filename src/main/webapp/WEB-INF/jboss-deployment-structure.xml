@@ -12,9 +12,9 @@
             <module name="org.slf4j" />
         </exclusions>
 
-<!--        <dependencies>-->
-<!--            <module name="com.microsoft.sqlserver.mssql-jdbc"/>-->
-<!--        </dependencies>-->
+        <dependencies>
+            <module name="com.microsoft.sqlserver.mssql-jdbc"/>
+        </dependencies>
 
     </deployment>
 </jboss-deployment-structure>
