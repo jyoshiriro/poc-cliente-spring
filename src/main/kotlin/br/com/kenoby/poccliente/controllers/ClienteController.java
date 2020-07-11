@@ -1,10 +1,13 @@
 package br.com.kenoby.poccliente.controllers;
 
 import br.com.kenoby.poccliente.entities.Cliente;
+import br.com.kenoby.poccliente.entities.ClienteResumido;
 import br.com.kenoby.poccliente.helpers.BeanUtils;
 import br.com.kenoby.poccliente.presenters.ClientePresenter;
+import br.com.kenoby.poccliente.presenters.ClienteResumidoPresenter;
 import br.com.kenoby.poccliente.presenters.ErrosPresenter;
 import br.com.kenoby.poccliente.repositories.ClienteRepository;
+import br.com.kenoby.poccliente.repositories.ClienteResumidoRepository;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,12 +32,14 @@ import static org.springframework.http.ResponseEntity.*;
 public class ClienteController {
 
     private ClienteRepository repository;
+    private ClienteResumidoRepository resumidoRepository;
 
     private final static String mensagemCamposInvalidos = "Um ou mais campos inválidos";
 
     @Autowired
-    public ClienteController(ClienteRepository repository) {
+    public ClienteController(ClienteRepository repository, ClienteResumidoRepository resumidoRepository) {
         this.repository = repository;
+        this.resumidoRepository =resumidoRepository;
     }
 
     @PostMapping
@@ -111,4 +116,11 @@ public class ClienteController {
         }
     }
 
+    @GetMapping("/resumidos")
+    public ResponseEntity<Page> getClientesResumidos(final Pageable paginacao) {
+
+        Page<ClienteResumidoPresenter> clientes = this.repository.findAllResumido(paginacao);
+
+        return clientes.isEmpty() ? noContent().build() : ok(clientes);
+    }
 }
